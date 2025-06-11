@@ -23,7 +23,7 @@ trap Adios INT
 
 banner1() {
   clear
-  echo -e "$v ▄▄▄▄▄▄
+  echo -e "$v ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
  ██▀▀▀▀██                        ██
  ██    ██   ▄████▄    ▄████▄   ███████
  ███████   ██▀  ▀██  ██▀  ▀██    ██
@@ -55,20 +55,13 @@ banner1
 echo -e "\033[0m\033[32m Instalación necesaria:$b\n"
 echo -e "$A[$v+$A]$A Instalando$v termux-password-gen$b"
 
-if pkg install -y proot &>/dev/null && [ -x /data/data/com.termux/files/usr/bin/proot ]; then
-  echo -e "${v}termux-password-gen instalado con éxito${b}"
-else
-  echo -e "${r}Error en la instalación${b}"
-  exit 1
-fi
-
-chmod +x start 2>/dev/null || true
+chmod +x generador.sh 2>/dev/null || true
 
 banner2
 
 printf "$A[$b1+$A]${b1} Finalizado..!\n"
 printf "$A[$b1+$A]${b1} Creador:$a Lizandro YT\n"
 printf "$A[$b1+$A]${b1} GitHub:$a  https://github.com/LizandroYT\n"
-printf "$A[$b1+$A]${b1} ./generador.sh [longitud]$b\n"
+printf "$A[$b1+$A]${b1} Utiliza:$r ./generador.sh [longitud]$b\n"
 echo
 exit 0
